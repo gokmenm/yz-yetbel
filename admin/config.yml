@@ -1,0 +1,22 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+i18n:
+  structure: multiple_folders
+  locales: [en, tr]
+  default_locale: en
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    folder: "content/pages"
+    create: true
+    slug: "{{slug}}"
+    i18n: true
+    fields:
+      - {label: "Title", name: "title", widget: "string", i18n: true}
+      - {label: "Body", name: "body", widget: "markdown", i18n: true}
