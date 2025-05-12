@@ -15,8 +15,8 @@
   </style>
   <script>
     function switchLang(lang) {
-      document.querySelectorAll('.lang-en').forEach(el => el.classList.remove('lang-active'));
       document.querySelectorAll('.lang-tr').forEach(el => el.classList.remove('lang-active'));
+      document.querySelectorAll('.lang-en').forEach(el => el.classList.remove('lang-active'));
       document.querySelectorAll('.lang-' + lang).forEach(el => el.classList.add('lang-active'));
     }
     window.onload = () => switchLang('en');
